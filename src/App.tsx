@@ -48,7 +48,9 @@ const AppJs = `import { OrbitControls, PerspectiveCamera } from '@react-three/dr
 import { Canvas, extend } from '@react-three/fiber';
 import { Suspense } from 'react';
 import { WebGPURenderer } from 'three/webgpu';
-import * as THREE from 'three'; // Add this line
+import * as THREE from 'three/webgpu';
+
+extend(THREE);
 
 console.log(window.__THREE__);
 
